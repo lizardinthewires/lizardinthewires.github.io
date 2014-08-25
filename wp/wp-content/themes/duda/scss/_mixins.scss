@@ -1,0 +1,75 @@
+$orange: #ff6700;
+$off-white: #f2f2f2;
+$light-grey: #c5c5c5;
+$nav-link: #7d7d7d;
+$dark-grey: #727272;
+
+@mixin center-block {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	float: none;
+}
+
+@mixin absolute($top:0, $right:0, $bottom:0, $left:0) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+.vertical-align-basic {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin vertical-align {
+  position: relative;
+  @extend .vertical-align-basic;
+
+}
+
+
+@mixin vertical-align-ab {
+  position: absolute;
+  @extend .vertical-align-basic;
+}
+
+@mixin breakpoint($maxOrMin, $point, $orientation:all) {
+  @if $orientation == all {
+    @if $point == large {
+      @media ($maxOrMin: 80em) { @content; }
+    }
+    @else if $point == medium {
+      @media ($maxOrMin: 64em) { @content; }
+    }
+    @else if $point == small {
+      @media ($maxOrMin: 40em) { @content; }
+    }
+} @else {
+    @if $point== xlarge {
+     @media ($maxOrMin: 120em) and (orientation: $orientation) { @content; }
+    }
+    @else if $point == large {
+      @media ($maxOrMin: 90em) and (orientation: $orientation) { @content; }
+    }
+    @else if $point == medium {
+      @media ($maxOrMin: 64em) and (orientation: $orientation) { @content; }
+    }
+    @else if $point == small {
+      @media ($maxOrMin: 40em) and (orientation: $orientation) { @content; }
+    }
+  }
+
+}
+
+$i:2;
+@for $i from 2 through 5 {
+    .depth-#{$i} {
+    background: darken($light-grey, $i);
+    padding: 10px;
+    margin: 10px;
+    $i: $i + 1;
+  }
+}

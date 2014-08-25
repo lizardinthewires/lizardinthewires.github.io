@@ -1,0 +1,24 @@
+//Colors from http://design-seeds.com/index.php/home/entry/frosted-summer1
+
+$firstColor: #EA6091;
+$secondColor: #D7FF78;
+$thirdColor: #AEF4F0;
+$fourthColor: #FFC86C;
+$fifthColor: #A03C73;
+
+$light-text: #fff;
+$dark-text: #222;
+
+$fancy-text: 'Shadows Into Light Two', cursive;
+
+$rounded: 15px;
+
+$small: new-breakpoint(max-width 950px);
+// Mixins 
+@mixin center-block {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	float: none;
+}
+

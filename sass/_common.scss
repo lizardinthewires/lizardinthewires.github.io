@@ -1,0 +1,258 @@
+h1, h2 {
+	font-family: $fancy-text;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+p, li {
+	font-size: 1.15rem;
+	font-weight: 300;
+	&.small {
+		font-size: 0.75rem;
+	}
+}
+
+a, a:hover, a:focus, a:visited {
+	color: #000;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.top-curve {
+	margin-bottom: -2.05em;
+}
+
+.wrapper {
+	@include outer-container;
+	padding: 0 2em;
+}
+
+.headline {
+	background: $secondColor;
+	h1 {
+		text-align: center;
+		color: #fff;
+		font-size: 4.5rem;
+		margin: 0;
+		padding-top: 1em;
+	}
+
+	~ .bottom-curve {
+		fill: $secondColor;
+	}
+}
+
+.intro {
+	padding: 2em 0;
+	.img {
+		@include span-columns(3);
+		img {
+			border-radius: 1000px;
+			border: 5px solid $fourthColor;
+			max-width: 200px;
+			height: auto;
+			@include center-block();
+		}
+	}
+	.text {
+		@include span-columns(9);
+	}
+
+	.img, .text {
+		@include media($small) {
+			@include span-columns(12);
+		}
+	}
+
+	~ .top-curve {
+		fill: $firstColor;
+	}
+}
+
+.skills {
+	~ .bottom-curve {
+		fill: $firstColor;
+	}	
+	background: $firstColor;
+
+	.left, .right {
+		@include span-columns(6);
+		margin-right: 0;
+		@include media($small) {
+			@include span-columns(12);
+		}
+	}
+
+	.showHide {
+		@include media($small) {
+			display: none;
+		}
+	}
+	ul:not(.other) {
+		margin: 0;
+		list-style-type: none;
+		li {
+			@include fill-parent();
+			padding: 0.5em 0;
+			clear: both;
+			.skill {
+				float: left;
+			}
+
+			.progress {
+				width: 65%;
+				background: #fff;
+				border-radius: $rounded;
+				height: 25px;
+				display: inline-block;
+				float: right;
+
+				@include media($small) {
+					width: 50%;
+				}
+
+				span.meter {
+					border-radius: $rounded;
+					background: $secondColor;
+					height: inherit;
+					display: inline-block;
+
+					&[data="95"] {
+						width: 95%;
+					}
+
+					&[data="80"] {
+						width: 80%;
+					}
+
+					&[data="75"] {
+						width: 75%;
+					}
+
+					&[data="60"] {
+						width: 60%;
+					}				
+
+					&[data="50"] {
+						width: 50%;
+					}					
+				}
+			}
+		}
+	}
+
+	ul.other {
+		@include clearfix();
+		li {
+			display: inline-block;
+			margin: 0 0.5em;
+		}
+	}
+}
+
+h2, .major, .gpa {
+		float: left;
+		width: 100%;
+	}
+	.date, .school {
+		float: right;
+	}
+
+	.dates {
+		font-size: 1rem;
+		font-family: $normal-font;
+		font-weight: 300;
+	}
+
+.projects {
+	~ .top-curve {
+		fill: $thirdColor;
+	}
+	.project-item {
+		@include span-columns(6);
+  		@include omega(even);
+
+  		@include media($small) {
+  			@include span-columns(12);
+  		}
+
+		img {
+			max-width: 75%;
+			height: auto;
+			margin: 1em auto;
+			border-radius: 3px;
+			border: 5px solid $fourthColor;	
+			@include center-block();	
+		}
+
+		p {
+			text-align: center;
+			margin-bottom: 3em;
+		}
+	}
+}
+.resume {
+	~ .bottom-curve {
+		fill: $thirdColor;
+	}
+	background: $thirdColor;
+
+	p {
+		clear: both;
+		margin-top: 2em;
+	}
+
+	ul {
+		@include span-columns(10);
+		@include omega();
+
+		@include media($small) {
+			display: none;
+		}
+		li {	
+			margin-bottom: 0.5em;
+		}
+	}
+}
+
+.contact {
+	ul {
+		li {
+			display: inline-block;
+			margin: 0 1em;
+
+			@include media($small) {
+				display:block;
+			}
+		}
+	}
+}
+
+
+//Helpers
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+svg {
+	display: block;
+}
+
+.more {
+	@include span-columns(12);
+	a.show {
+		display: none;
+		
+		@include media($small) {
+		display: block;
+	}
+	}
+}

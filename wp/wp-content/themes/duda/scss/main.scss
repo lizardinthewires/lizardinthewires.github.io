@@ -1,0 +1,17 @@
+@import "normalize",
+		"grid",
+		"mixins",
+		"header",
+		"body",
+		"footer";
+
+//Global Stuff
+
+a {
+	color: $orange;
+
+    &:focus, &:hover, &:active  {
+        color: darken($orange, 10%);
+        transition: 0.5s ease-in-out 0s color;
+    }
+} 

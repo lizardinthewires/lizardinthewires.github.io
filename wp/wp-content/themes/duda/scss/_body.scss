@@ -1,0 +1,258 @@
+.container {
+	background: #fff;
+	@include column(12);
+
+	section#content {
+		@include column(10);
+		@include center-block;
+
+		article {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #c5c5c5;
+			position: relative;
+			clear: both;
+			@include clearfix();
+
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+.border {
+	border: 1px solid #c5c5c5;
+}
+
+article {
+	.post-img {
+		@include vertical-align-ab;
+		@include column(4);
+		@include breakpoint(max-width, medium) {
+			position: relative;
+			top: auto;
+			transform: none;
+			@include column(12);
+		}
+		img {
+			max-width: 200px;
+			height: auto;
+			@include center-block;
+		}
+	}
+//Main page post text
+	.post-text {
+		@include column(8);
+		@include push(4);
+		padding: 30px 0;
+
+		@include breakpoint(max-width, medium) {
+			@include column(12);
+			@include push(0);
+			clear: both;
+		}
+
+		.entry-title a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+//Full article post text
+	.full-post-text {
+		@include column(12);
+		@include center-block();
+		max-width: $max-width * .6;
+
+		.author-info {
+			float: right;
+			padding-top: 20px;
+
+			img {
+				border-radius: 64px;
+				border: 1px solid #c5c5c5; 
+			}
+
+			+ h1 {
+				@include breakpoint(max-width, medium) {
+					clear: both;
+					padding-top: 30px;
+				}
+			}
+		}
+	}	
+
+	.comments-link {
+		float: right;
+		@include breakpoint(max-width, small) {
+			@include column(12);
+			float: none;
+			display: block;
+		}
+	}
+
+	.entry-date, .author {
+		color: $light-grey;
+	}
+
+	.author {
+		text-transform: capitalize;
+	}
+
+	h2 {
+		font-weight: bold;
+	}
+
+	.entry-content {
+		p {
+			font-size: 1.05rem;
+			line-height: 1.5;
+			color: $dark-grey;
+
+			&:first-of-type {
+				margin-top: 2em;
+			}
+		}
+	}
+}
+
+//Comments
+
+#disqus_thread {
+	@include column(10);
+	@include center-block();
+	max-width: $max-width;
+}
+
+//Post navigation
+.post-nav {
+	@include column(10);
+	@include center-block();
+}
+#nav-below {
+	@include container();
+	padding: 2em;
+	 a {
+		color: $dark-grey;
+		text-decoration: none;
+	}
+
+	.nav-previous, .nav-next {
+		@include column(5);
+	}
+
+	.nav-next {
+		@include push(7);
+		text-align: right;
+	}
+}
+
+//On Post Author Bio Section
+.author-info-bottom {
+	@include breakpoint(max-width, small) {
+		display: none;
+	}
+	@include column(10);
+	@include center-block;
+	padding: 40px 0;
+
+	.img {
+		@include column(1);
+		img {
+
+		border-radius: 64px;
+		border: 1px solid #c5c5c5; 
+		}
+	}
+	.text {
+		@include column(11);
+		@include push(1);
+
+		h3 {
+			margin:0;
+		}
+	}
+
+	.all-posts {
+		@include column(3);
+		@include push(9);
+	}
+}
+
+//Comments
+
+
+//Subscribe Box
+.subscribe {
+	@include column(10);
+	@include center-block();
+	background: $off-white;
+	border-bottom: 1px solid $light-grey;
+	border-left: 1px solid $light-grey;
+	border-right: 1px solid $light-grey;
+
+	@include breakpoint(max-width, medium) {
+		@include column(12);
+	}
+
+	@include breakpoint(max-width, small) {
+		display: none;
+	}	
+
+	.form-box {
+		max-width: $max-width * .6;
+		height: 6rem;
+		@include center-block();
+	}
+
+	.form, .text {
+		@include vertical-align();	
+	}
+
+	.form {
+		@include column(7);
+		@include push(5);
+		height: 2.5em;
+
+		input[type="text"] {
+			border: 1px solid $light-grey;
+			height: 100%;
+			padding-left: 1rem;
+			width: 56%;
+			height: 2.5em;
+			border-radius: 3px 0 0 3px;
+		}
+
+		input[type="submit"] {
+			background: $orange;
+			color: #fff;
+			text-transform: uppercase;
+			vertical-align: top;
+			padding: 0.4em 1em;
+			font-weight: 300;
+			border: 1px solid darken($orange, 10%);
+			height: 2.5em;
+			border-radius: 0 3px 3px 0;
+		}
+	}
+
+	.text {
+		@include column(6);
+		font-size: 1.75rem;
+		color: $orange;
+
+		p {
+			text-align: center;
+		}
+	}
+}
+
+//Hide Articles Images on Homepage
+.home {
+	.entry-content {
+		img {
+			display: none;
+		}
+	}
+}

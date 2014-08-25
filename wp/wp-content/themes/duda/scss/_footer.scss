@@ -1,0 +1,87 @@
+.footer {
+	margin-top: 50px;
+	background: #333;
+	color: $light-grey;
+	font-weight: 200;
+	max-width: 100%;
+
+
+	.links {
+		clear: both;
+		@include column(10);
+		@include center-block;
+	}
+
+	ul {
+
+		@include breakpoint (max-width, medium) {
+			display: none;
+		}
+		list-style-type: none;
+		li {
+			line-height: 1.2;
+			&:first-of-type {
+				padding-bottom: 10px;
+			}
+			a {
+				color: $light-grey;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.product {
+		@include column(2);
+	}
+
+	.partner {
+		@include column(2);
+		@include push(2);
+	}
+
+	.about {
+		@include column(2);
+		@include push(4);
+	}
+
+	.community {
+		@include column(2);
+		@include push(6);
+	}
+
+	.social {
+		@include column(2);
+		@include push(8);
+		img {
+			padding: 5px 0;
+		}
+	}
+
+	.bbb {
+		@include column(2);
+		@include push(10);
+		padding-top: 35px;
+		@include breakpoint (max-width, medium) {
+			display: none;
+		}
+	}
+
+	.contact {
+		@include column(5);
+		@include push(1);
+		clear: both;
+	}
+
+	.copyright {
+		@include column(5);
+		@include push(6);
+		text-align: right;
+		clear: both;
+
+		@include breakpoint (max-width, medium) {
+			@include column(12);
+			@include push(0);
+			text-align: center;
+		}
+	}
+}

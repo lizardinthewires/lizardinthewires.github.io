@@ -1,0 +1,244 @@
+section, footer {
+	@include container();
+	@include clearfix();
+}
+
+#wrapper {
+	@include column(10);
+	@include center-block;
+	max-width: $max-width;
+	@include breakpoint(max-width, medium) {
+		@include column(12);
+	}
+}
+
+nav {
+	height: 70px;
+	@include clearfix();
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		&.left {
+			@include column(6);
+
+			@include breakpoint(max-width, medium) {
+				@include column(12);
+			}
+
+			li {
+				width: 33.33%;
+				float: left;
+				text-align: center;
+				&.mobile {
+					border-right: 1px solid $light-grey;
+					border-left: 1px solid $light-grey;
+				}
+
+				&.one {				
+					border-right: 1px solid $light-grey;
+				}
+
+				&.pro {
+					border-right: 1px solid $light-grey;
+				}
+
+				> a {
+					color: $nav-link;
+					font-size: 0.8125rem;
+					line-height: 2;
+					font-weight: 700;
+					padding-top: 20px;
+					display: inline-block;
+					padding: 1em 0 1.5em;
+					width: 100%;
+				}
+			}
+		}
+		&.right {
+			@include column(2);
+			@include push(10);
+
+			@include breakpoint(max-width, medium) {
+				display: none;
+			}
+
+			li {
+				margin: 0 0.5em;
+				float: right;
+
+				a {
+					line-height: 75px;
+					color: $nav-link;
+					weight: 400;
+					font-size: 0.8125rem;
+					text-transform: uppercase;
+				}
+			}
+		}
+		li {
+			display: inline-block;
+
+			.logo {
+				height: 13px;
+				width: 29px;
+				background: url(//dm-util.s3.amazonaws.com/duda_website/img/logos/small-grey-duda.png) no-repeat bottom center;
+				background-size: contain;
+				display: inline-block;
+				transition: 0.5s ease-in-out 0s background;
+			}
+
+			&:hover {
+				.logo {
+					background: url(//dm-util.s3.amazonaws.com/duda_website/img/logos/small-duda.png) no-repeat bottom center;
+					background-size: contain;
+				}
+			}	
+		}
+
+		.logo-text {
+			padding-left: 2px;
+			vertical-align: top;
+			line-height: 1.5;
+		}
+			
+		.explainer-text {
+			padding-top: 2px;
+			display: block;
+			line-height: 1;
+			text-transform: uppercase;
+		}
+	}
+}
+
+#header {
+	background: url(//dm-util.s3.amazonaws.com/duda_website/blog/header-backer.jpg) top center;
+	background-size: cover;
+	height: 350px;
+
+	@include breakpoint(max-width, small) {
+		height: 300px;
+	}
+
+	.categories {
+		@include column(12);
+		@include center-block();
+		text-align: center;
+
+		@include breakpoint(max-width, small) {
+			display: none;
+		}
+		ul {
+			@include center-block();
+			padding: 0;
+			
+			li {
+				display: inline-block;
+				margin: 1em;
+				text-align: center;
+
+				a {
+					color: $light-grey;
+					text-transform: uppercase;
+					font-size: 0.8125rem;
+					letter-spacing: .02rem;
+
+					&:hover {
+						color: #fff;
+						font-weight: 500;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	.logo-and-search {
+		padding-top: 50px;
+
+		.logo {
+			@include column(11);
+			@include center-block;
+			@include clearfix();
+			img {
+				height: 25px;
+				@include center-block;
+			}
+
+			h1 {
+				text-transform: uppercase;
+				color: #fff;
+				text-align: center;
+				font-size: 6rem;
+				margin: 0;
+			}
+		}
+
+		.search-form {
+			position: relative;
+		}
+
+		.search {
+			@include column(4);
+			@include center-block;
+			@include clearfix();
+			margin-top: 10px;
+
+			@include breakpoint(max-width, medium) {
+				display: none;
+			}
+		}
+			input[type="search"] {
+				width: 100%;
+				height: 2.25rem;
+				padding-left: 1rem;
+			}
+
+			input[type="submit"] {
+				@include absolute(0,0,0,89%);
+				width: 11%;
+				border: none;
+				background: url(//dm-util.s3.amazonaws.com/duda_website/blog/search.png) no-repeat center $orange;
+				background-size: 60%;
+			}
+	}	
+
+	&.post {
+		height: 225px;
+		.logo-and-search {
+			padding-top: 25px;
+			height: 175px;
+			.logo {
+				@include column(6);
+				padding-left: 4%;
+
+				@include breakpoint(max-width, small) {
+					@include column(12);
+				}
+
+				img {
+					margin-left: 0;
+					padding-left: 1%;
+				}
+
+				h1 {
+					text-align: left;
+				}
+			}
+			.search {
+				@include column(4);
+				@include push(7);
+				@include vertical-align();
+			}
+		}
+
+		.categories {
+			ul {
+				li {
+					margin: 0 1em;
+				}
+			}
+		}
+	}
+}
