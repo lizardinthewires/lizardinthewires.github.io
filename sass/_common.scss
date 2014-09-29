@@ -138,7 +138,16 @@ a, a:hover, a:focus, a:visited {
 
 					&[data="50"] {
 						width: 50%;
-					}					
+					}
+
+					&[data="40"] {
+						width: 40%;
+					}
+
+					&[data="30"] {
+						width: 30%;
+					}
+
 				}
 			}
 		}
