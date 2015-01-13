@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-$(document).foundation();
-=======
 function showMoreShowLess(){
 	var parent  = $(this).parent().parent(),
 		toggled = $(parent).find('.showHide'),
@@ -11,6 +8,6 @@ function showMoreShowLess(){
 }
 
 $('a.show').on('click', showMoreShowLess);
->>>>>>> b9e8f5fc0ac8322991daa564784feea5f4568f3e
+
 
 
