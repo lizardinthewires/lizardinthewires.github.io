@@ -1,0 +1,621 @@
+.site-wrap {
+    height: inherit;
+    position: relative;
+    margin: auto;
+    display: flex;
+
+    .overlay {
+        background: $light-brown;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        opacity: .75;
+    }
+
+    &.tablet {
+        background: url(//dm-util.s3.amazonaws.com/duda_website/svg/holiday-lp/tablet-frame.svg) top no-repeat;
+        background-size: 900px 1100px;
+        margin-top: 5%;
+    }
+
+    &.mobile {
+        background: url(//dm-util.s3.amazonaws.com/duda_website/svg/holiday-lp/mobile-frame.svg) 49.5% top no-repeat;
+        background-size: 525px 900px;
+        margin-top: 10%;
+        
+
+    }
+}
+.site {
+    margin: 0 auto;
+
+    &.desktop {
+        width: 100%;
+        margin: auto;
+        overflow-y: auto;
+    }
+    &.tablet {
+        width: 800px;
+        margin-top: 80px;
+        height: auto !important;
+        max-height: 875px;
+        border: 2px solid $light-brown;
+        border-radius: 5px;
+        overflow-y: auto;
+        margin-bottom: 60px;
+    }
+    &.mobile {
+        width: 450px;
+        margin-top: 80px;
+        height: auto !important;
+        max-height: 720px;
+        border: 2px solid $light-brown;
+        border-radius: 5px;
+        overflow-y: auto;
+        margin-bottom: 120px;
+    }
+}
+
+//Greeting
+.greeting {
+    background: url('//dm-util.s3.amazonaws.com/duda_website/img/holiday-lp/greeting.png') no-repeat center;
+    max-width: 960px;
+    position: fixed;
+    z-index: 3;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    height: 100%;
+
+    img {
+        padding: 0.5em 0;
+        max-width: 225px;
+    }
+
+    .message {
+        padding: 10em 7em 2em;
+        @include vertical-align();
+
+        h1 {
+            color: $light-brown;
+        }
+
+        svg:hover {
+            stroke: none;
+
+            circle {
+                fill: $light-brown;
+            }
+            polyline {
+                stroke: #F7F2EA;
+            }
+        }
+    }
+
+    p {
+        padding: 1em 0;
+    }
+}
+
+//Generic
+.generic {
+    background: url(//dm-util.s3.amazonaws.com/duda_website/img/holiday-lp/generic/main.jpg);
+    background-position: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4em 0 2em 0;
+
+    img {
+        padding: 0 0 4em 0;
+    }
+
+    .hero {
+        height: 346px;
+    }
+
+    .about {
+        background: $white;
+        border: 3px solid $light-brown;
+        padding: 2em 4em;
+
+        p {
+            font-size: 1rem;
+        }
+
+        &.thanksgiving, &.black-friday, &.small-biz-saturday, &.cyber-monday, &.x-mas {
+            border: none;
+            margin-bottom: -2em;
+        }
+
+        &.thanksgiving {
+            h2 {
+                color: $thanksgiving;
+            }
+        }
+
+        &.x-mas {
+            h2 {
+                color: $x-mas;
+            }
+        }
+    }
+}
+
+.mobile {
+    .generic {
+        padding: 0.25em;
+        .large-8 {
+            width: 90%;
+        }
+        .about {
+            padding: 0.25em;
+
+            h2 {
+                padding-top: 1em;
+                font-size: rem-calc(30);
+            }
+        }
+    }
+}
+
+//Coupon
+.coupon {
+    background: $white;
+    padding: 4em 0 1em;
+
+    img {
+        width: 90%;
+        height: 90%;
+        border-radius: 1500px;
+    }
+
+    button {
+        width: 50%;
+        background: $oil;
+        font-weight: bold;
+        font-size: rem-calc(18);
+    }
+
+    .text {
+        position: relative;
+        margin-top: 1em;
+    }
+
+    .top {
+        font-size: rem-calc(50);
+        font-weight: bold;
+        font-family: font-family-serif;
+        padding: 0.25em 0;
+    }
+
+    .border {
+        height: 10px;
+        position: relative;
+        margin-bottom: -10px;
+        background-position: left bottom;
+        background-repeat: repeat-x;
+        background-size: 10px 10px;
+    }    
+
+    .middle {
+        font-style: italic;
+        font-size: rem-calc(30);
+        font-family: font-family-serif;
+        padding: 0.5em 0;
+    }
+
+    .bottom {
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    &.thanksgiving {
+        .top {
+            background: $thanksgiving;
+            color: $white;
+
+        }
+        .border {
+            background-image: linear-gradient(135deg, #FFA82A 3px, rgba(0, 0, 0, 0) 0px), linear-gradient(225deg, #FFA82A 3px, rgba(0, 0, 0, 0) 0px);
+        }
+        .middle {
+            background: lighten($thanksgiving, 35%);
+            color: $thanksgiving;
+        }
+        .bottom {
+            border: 5px solid $thanksgiving;
+            color: $thanksgiving;
+        }
+
+    }
+
+    &.black-friday {
+        img {
+            border: 5px solid $oil;
+        }
+        .top {
+            background: $oil;
+            color: $white;
+        }
+        .border {
+            background-image: linear-gradient(135deg, $oil 3px, rgba(0, 0, 0, 0) 0px), linear-gradient(225deg, $oil 3px, rgba(0, 0, 0, 0) 0px);
+        }
+        .middle {
+            background: #F2F8FD;
+            color: $oil;
+        }
+        .bottom {
+            background: lighten($oil, 10%);
+            color: $white;
+        }
+
+        button {
+            text-transform: uppercase;
+        }
+    }
+
+    &.small-biz-saturday {
+        .top {
+            background: $blue;
+            color: $white;
+        }
+        .border {
+            background-image: linear-gradient(135deg, $blue 3px, rgba(0, 0, 0, 0) 0px), linear-gradient(225deg, $blue 3px, rgba(0, 0, 0, 0) 0px);
+        }
+        .middle {
+            background: lighten($blue, 35%);
+        }
+        .bottom {
+            background: lighten($blue, 20%);
+            color: $white;
+        }
+        button {
+            background: lighten($blue, 20%);
+            text-transform: uppercase;
+        }
+    }
+    &.cyber-monday {
+        .top, button {
+            background: $cyber-monday;
+            color: $white;
+            text-transform: uppercase;
+        }
+        .border {
+            background-image: linear-gradient(135deg, $cyber-monday 3px, rgba(0, 0, 0, 0) 0px), linear-gradient(225deg, $cyber-monday 3px, rgba(0, 0, 0, 0) 0px);
+        }
+        .middle {
+            font-family: $font-family-sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            background: lighten($cyber-monday, 62%);
+        }
+        .bottom {
+            background: #526D87;
+            color: $white;
+        }
+    }
+
+    &.x-mas {
+        .top {
+            background: $x-mas;
+            color: $white;
+        }
+        .border {
+            background-image: linear-gradient(135deg, $x-mas 3px, rgba(0, 0, 0, 0) 0px), linear-gradient(225deg, $x-mas 3px, rgba(0, 0, 0, 0) 0px);
+        }
+        .middle {
+            background: lighten($x-mas, 30%);
+            color: $x-mas;
+        }
+        .bottom {
+            color: $x-mas;
+            border: 5px solid $x-mas;
+        }
+    }
+}
+
+.mobile {
+    .coupon {
+        .large-8 {
+            width: 100%;
+        }
+        img {
+            display:none;
+        }
+        padding: 1em;
+
+        .border {
+            margin: 0;
+            width: 100%;
+        }
+        .text {
+            width: 100%;
+            padding: 0;
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.tablet {
+    .coupon {
+        .large-8 {
+            width: 100%;
+
+            img {
+                margin-top: 10%;
+            }
+        }
+    }
+}
+
+//Non-Changing Page Parts
+.rest-of-page {
+    h2 {
+        color: $light-brown;
+        font-style: italic;
+    }
+
+    h3 {
+         font-style: italic;
+    }
+
+    hr {
+        border: 1px solid $light-brown;
+    }
+
+    .swirl {
+        width: 20%;
+        margin: 2em auto;
+    }
+
+    .social {
+    background: url('//dm-util.s3.amazonaws.com/duda_website/img/holiday-lp/crosshatch.png') #fff;
+    background-attachment: fixed;
+
+    h3 {
+        margin: 3em;
+    }
+
+    img {
+        margin-bottom: 4em;
+    }
+}
+}
+
+.mobile {
+    .rest-of-page {
+        .swirl {
+            width: 50%;
+        }
+
+        h2 {
+            font-size: rem-calc(30)
+        }
+
+        .subscribe {
+            .large-9 {
+                width: 100%;
+            }
+        }
+
+        .form {
+            width: 100%;
+
+            .large-4 {
+                width: 100%;
+            }
+
+            button {
+                float: none;
+                text-align: center;
+                margin-right: 0;
+            }
+
+            textarea {
+                width: 100%;
+            }
+        }
+
+        .video {
+            display: none;
+        }
+
+        .text {
+            width: 100%;
+        }
+
+        .calendar {
+            width: 100%;
+            border: 2px solid #B79F83
+        }
+
+        .hours {
+            p {
+                font-size: rem-calc(15);
+                text-align: center;
+            }
+
+            .large-9 {
+                width: 100%;
+            }
+
+            h3 {
+                text-align: center;
+            }
+        }
+
+        .social {
+            h3 {
+                margin: 1em;
+            }
+        }
+
+        .map {
+            img {
+                display: none;
+            }
+            button {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.tablet {
+    .generic {
+        .about {
+            width: 80%;
+        }
+    }
+    .rest-of-page {
+        .video {
+            width: 100%;
+        }
+        .form {
+            margin-bottom: 1em;
+            width: 100%;
+            .large-4 {
+                width: 100%;
+            }
+            textarea {
+                height: 39px;
+                width: 100%;
+                border: 2px solid #b79f83;
+                border-radius: 3px;
+            }
+
+            button {
+                margin-right: 0;
+            }
+        }
+
+        .hours {
+            .calendar {
+                margin-top: 2.5em;
+                padding: 2em 0;
+                p {
+                    font-size: rem-calc(18);
+                }
+            }
+        }
+    }
+}
+.subscribe {
+    background: $white;
+    min-height: 600px;
+
+    .form {
+        background: url('//dm-util.s3.amazonaws.com/duda_website/img/holiday-lp/crosshatch.png');
+        border: 2px solid $light-brown;
+        padding-top: 1em;
+
+        label {
+            float: left;
+            color: $light-brown;
+            font-family: $font-family-serif;
+
+            &:last-of-type {
+                margin-top: 1em;
+            }
+        }
+
+        input {
+            border: 2px solid $light-brown;
+            border-radius: 3px;
+            padding: 0.25em;
+            font-size: rem-calc(22);
+
+            &[type="text"] {
+                width: 100%;
+            }
+        }
+
+        textarea {
+            border: 2px solid $light-brown;
+            border-radius: 3px;
+            margin-bottom: 1em;
+            width: 100%;
+            height: 205px;
+        }
+
+        button {
+            background: $light-brown;
+            float: right;
+            font-family: $font-family-serif;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.125em;
+            padding: 0.725em 1.5em;
+            margin-right: 15px;
+        }
+    }
+
+    .video {
+        width: 49%;
+        float: right;
+    }
+}
+.grass {
+    background: url(//dm-util.s3.amazonaws.com/duda_website/img/holiday-lp/generic/lawn.jpeg) no-repeat fixed;
+    background-size: cover;
+    height: 400px;
+}
+
+.hours {
+    border-bottom: 2px solid $light-brown;
+    background: $white;
+
+    .text {
+        padding-top: 2.5em;
+    }
+
+    .calendar {
+        background: url('//dm-util.s3.amazonaws.com/duda_website/img/holiday-lp/crosshatch.png');
+        border: 4px solid $light-brown;
+        font-family: $font-family-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 1em 0;
+        padding: 1em 0;
+
+        p {
+                font-size: rem-calc(22);
+                font-weight: bold;
+                margin: 0;
+            }
+
+        .day {
+            order: 1;
+        }
+
+        .time {
+            order: 2;
+        }
+    }
+}
+
+.map {
+    button {
+        display: none;
+        background: $light-brown;
+        border-radius: $global-rounded;
+        margin: 0.5 auto;
+    }
+}
+
+.contact {
+    background: darken($white, 10%);
+    margin-top: -10px;
+    p {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+}
