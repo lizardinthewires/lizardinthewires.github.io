@@ -1,0 +1,35 @@
+// Parallax Magic from http://codepen.io/scottkellum/pen/bHEcA
+
+@mixin parallax-init(
+  $perspective  : 1,
+  $element      : "body",
+  $parallax-ios : true
+  ) {
+
+  #{$element} {
+    overflow: auto;
+    @include perspective($perspective * 1px);
+    @include transform-style(preserve-3d);
+    // Allows for smooth scrolling but disables parallax effects.
+    @if $parallax-ios == false {
+      -webkit-overflow-scrolling: touch;
+    }
+    // Preserve 3D
+    &, * {
+      @include transform-style(preserve-3d);
+    }
+  }
+}
+
+@mixin parallax(
+  $distance    : 0,
+  $perspective : 1
+  ) {
+  @include transform(
+    translateZ($distance * $perspective * 1px)
+    scale(abs($distance - 1))
+  );
+  z-index: $distance * 1000;
+}
+
+@include parallax-init;

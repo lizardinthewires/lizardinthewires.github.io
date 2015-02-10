@@ -4,13 +4,12 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
-  livereload = require('gulp-livereload'),
-  uncss = require('gulp-uncss'),
+  // livereload = require('gulp-livereload'),
   watch = require('gulp-watch');
 
 
 gulp.task('sass', function () {
-    return gulp.src('sass/*.*')
+    return gulp.src('sass/main.scss')
     	.pipe(sass({ style: 'compressed' }))
     	.pipe(autoprefixer('last 2 version', 'ie 9', 'ios 6', 'android 4'))
     	.pipe(gulp.dest('css/'))
@@ -24,14 +23,6 @@ gulp.task('scripts', function() {
     .pipe(rename({suffix: '.min'}))
 });
 
-gulp.task('critical', function() {
-  return gulp.src('css/main.css')
-    .pipe(uncss({
-      html: ['index.html']
-    }))
-    .pipe(gulp.dest('css/prod'));
-});
-
 gulp.task('watch', function() {
 
   // Watch .scss files
@@ -41,8 +32,8 @@ gulp.task('watch', function() {
   gulp.watch('js/*.js', ['scripts']);
 
   //Watch liveReload files
-  gulp.watch('*.html').on('change', livereload.changed);
-  gulp.watch('css/*.css').on('change', livereload.changed);  
+  // gulp.watch('*.html').on('change', livereload.changed);
+  // gulp.watch('css/*.css').on('change', livereload.changed);
 
 });
 

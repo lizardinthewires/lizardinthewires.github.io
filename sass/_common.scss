@@ -35,12 +35,14 @@ a, a:hover, a:focus, a:visited {
 
 .headline {
 	background: $secondColor;
+
 	h1 {
 		text-align: center;
 		color: #fff;
 		font-size: 4.5rem;
 		margin: 0;
 		padding-top: 1em;
+		@include parallax(0.1);
 	}
 
 	~ .bottom-curve {
@@ -49,16 +51,15 @@ a, a:hover, a:focus, a:visited {
 }
 
 .intro {
+	@include parallax(0.15);
 	padding: 2em 0;
 	.img {
 		@include span-columns(3);
-		img {
 			border-radius: 1000px;
 			border: 5px solid $fourthColor;
 			max-width: 200px;
 			height: auto;
-			@include center-block();
-		}
+			shape-outside: circle(50%);
 	}
 	.text {
 		@include span-columns(9);
@@ -78,7 +79,10 @@ a, a:hover, a:focus, a:visited {
 .skills {
 	~ .bottom-curve {
 		fill: $firstColor;
-	}	
+	}
+	.wrapper {
+		@include parallax(0.15);
+	}
 	background: $firstColor;
 
 	.left, .right {
@@ -137,7 +141,7 @@ a, a:hover, a:focus, a:visited {
 
 					&[data="60"] {
 						width: 60%;
-					}				
+					}
 
 					&[data="50"] {
 						width: 50%;
@@ -160,7 +164,7 @@ a, a:hover, a:focus, a:visited {
 		@include clearfix();
 		li {
 			display: inline-block;
-			margin: 0 0.5em;
+			margin: 0 0.5em 3em;
 		}
 	}
 }
@@ -184,6 +188,7 @@ h2, .major, .gpa {
 		fill: $thirdColor;
 	}
 	.project-item {
+		@include parallax(0.15);
 		@include span-columns(6);
   		@include omega(even);
 
@@ -196,8 +201,8 @@ h2, .major, .gpa {
 			height: auto;
 			margin: 1em auto;
 			border-radius: 3px;
-			border: 5px solid $fourthColor;	
-			@include center-block();	
+			border: 5px solid $fourthColor;
+			@include center-block();
 		}
 
 		p {
@@ -209,6 +214,10 @@ h2, .major, .gpa {
 .resume {
 	~ .bottom-curve {
 		fill: $thirdColor;
+	}
+
+	.wrapper {
+		@include parallax(0.15);
 	}
 	background: $thirdColor;
 
@@ -224,13 +233,15 @@ h2, .major, .gpa {
 		@include media($small) {
 			display: none;
 		}
-		li {	
+		li {
 			margin-bottom: 0.5em;
 		}
 	}
 }
 
 .contact {
+	@include parallax(0.15);
+	margin-bottom: 5em;
 	ul {
 		li {
 			display: inline-block;
@@ -262,7 +273,7 @@ svg {
 	@include span-columns(12);
 	a.show {
 		display: none;
-		
+
 		@include media($small) {
 		display: block;
 	}
