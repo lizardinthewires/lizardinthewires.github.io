@@ -42,7 +42,6 @@ a, a:hover, a:focus, a:visited {
 		font-size: 4.5rem;
 		margin: 0;
 		padding-top: 1em;
-		@include parallax(0.1);
 	}
 
 	~ .bottom-curve {
@@ -51,7 +50,6 @@ a, a:hover, a:focus, a:visited {
 }
 
 .intro {
-	@include parallax(0.15);
 	padding: 2em 0;
 	.img {
 		@include span-columns(3);
@@ -81,7 +79,6 @@ a, a:hover, a:focus, a:visited {
 		fill: $firstColor;
 	}
 	.wrapper {
-		@include parallax(0.15);
 	}
 	background: $firstColor;
 
@@ -188,7 +185,6 @@ h2, .major, .gpa {
 		fill: $thirdColor;
 	}
 	.project-item {
-		@include parallax(0.15);
 		@include span-columns(6);
   		@include omega(even);
 
@@ -215,10 +211,6 @@ h2, .major, .gpa {
 	~ .bottom-curve {
 		fill: $thirdColor;
 	}
-
-	.wrapper {
-		@include parallax(0.15);
-	}
 	background: $thirdColor;
 
 	p {
@@ -240,8 +232,7 @@ h2, .major, .gpa {
 }
 
 .contact {
-	@include parallax(0.15);
-	margin-bottom: 5em;
+	margin-bottom: 2em;
 	ul {
 		li {
 			display: inline-block;
