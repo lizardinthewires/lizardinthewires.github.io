@@ -1,0 +1,16 @@
+<div class="cv">
+  <dl>
+    {% assign positions = site.data.career.positions %}
+
+    {% for position in positions %}
+
+    <dt><b class="blue">{{position.title}}</b> / {{ position.company }}</dt>
+    <dd><small>{{position.date}}</small></dd>
+    <dd>{{position.details}}</dd>
+
+    {% endfor %}
+  </dl>
+
+</div>
+
+

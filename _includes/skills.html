@@ -1,0 +1,20 @@
+<div class="skills">
+  <h2 class="blue">Skiils</h2>
+  <dl>
+    {% assign skills = site.data.career.skills %}
+
+    {% for skill in skills %}
+
+    <dt>
+      {{ skill.name }}
+      {% if skill.learning%}<sup>*</sup>
+      {% elsif skill.lightly_familiar%}<sup>†</sup>
+      {% endif %}
+    </dt>
+    {% endfor %}
+  </dl>
+  <dl>
+    <dt><small><sup>*</sup> Learning</small></dt>
+    <dt><small><sup>†</sup> Lightly Familiar</small></dt>
+  </dl>
+</div>

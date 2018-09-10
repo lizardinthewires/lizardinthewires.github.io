@@ -1,0 +1,20 @@
+projects:
+  - name: Duda Insite Landing Page
+    folder: insite-landing
+    description: A landing page built for the launch of Duda's inSite feature.
+    tags: responsive, sass, fullpage.js
+
+  - name: Duda Marketing Site
+    folder: duda-voyager
+    description: A resdesign for Duda's marketing site featuring their three core products.
+    tags: responsive, sass, javascript
+
+  - name: Duda Holiday Landing Page
+    folder: holiday-lp
+    description: An interactive landing page showing the different templates and inSites avialable for the Duda 2014 holiday campiagn.
+    tags: responsive, haml, animation, sass, coffeescript
+
+  - name: Duda Marketing Site
+    folder: jake
+    description: A responsive resdesign for Duda's marketing site featuring using a video header.
+    tags: responsive, sass, javascript, video

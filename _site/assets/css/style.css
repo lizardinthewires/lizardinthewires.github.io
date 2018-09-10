@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+
+body { background: #DDE7DE; color: #000A1E; display: -ms-grid; display: grid; font: 18px/1.5 "Roboto", "Helvetica Neue", Helvetica, sans-serif; margin: 0; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Roboto", Georgia, serif; font-weight: 900; }
+
+h1 { font-size: 3.5rem; }
+
+.about { grid-column: col 3/span 2; grid-row: row 2; }
+
+.img { grid-column: col/span 4; grid-row: row/span 2; }
+
+.cv, .skills { margin-top: 5rem; margin-left: 10rem; }
+
+.cv { grid-column: col/span 3; grid-row: row 3; }
+
+.skills { grid-column: col 4; grid-row: row 3; margin-right: 5rem; }
+
+.img { background: url("/assets/images/colleen_beach.jpg") center right; background-size: cover; min-height: 100vh; }
+
+.about { background: #DDE7DE; border-radius: 15rem 0 0 15rem; padding: 1rem 1rem 2rem 4rem; margin-bottom: 2.5rem; }
+
+.cv dt { margin-top: 2rem; }
+.cv dd { margin-left: 0; }
+
+.skills { min-width: 15rem; }
+.skills ul { list-style: none; }
+
+.blue { color: #00AABE; }
+
+.no-margin-top { margin-top: 0; }
+
+.no-margin-bottom { margin-bottom: 0; }
+
+.center { text-align: center; }
