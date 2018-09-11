@@ -1,0 +1,16 @@
+<div class="portfolio">
+  {% assign portfolio = site.data.portfolio.projects %}
+  <div class="projects">
+  {% for project in portfolio %}
+    <figure class="project">
+      <img src="/assets/images/{{project.folder}}.jpg" alt="{{project.name}}">
+      <figcaption>
+        <a href="/{{project.folder}}.html">
+          <h3 class="blue no-margin-bottom">{{project.name}}</h3>
+          <p class="no-margin-top">{{project.description}}</p>
+        </a>
+      </figcaption>
+    </figure>
+  {% endfor %}
+  </div>
+</div>

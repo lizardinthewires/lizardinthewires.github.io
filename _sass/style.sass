@@ -1,0 +1,93 @@
+// variables
+
+$white: #DDE7DE
+$black: #000A1E
+$blue: #00AABE
+
+// base
+
+*
+  box-sizing: border-box
+
+body
+  background: $white
+  color: $black
+  display: -ms-grid
+  display: grid
+  font: 18px/1.5 'Roboto', 'Helvetica Neue', Helvetica, sans-serif
+  margin: 0
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Roboto', Georgia, serif
+  font-weight: 900
+
+h1
+  font-size: 3.5rem
+
+
+// grid
+
+.about
+  grid-column: col 4 / span 3
+  grid-row: row 2
+
+.img
+  grid-column: col / span 6
+  grid-row: row / span 2
+
+.gutter-left, .gutter-right
+  width: 10rem
+
+.gutter-left
+  grid-column: col
+  grid-row: row 3
+
+.cv
+  grid-column: col 2 / span 3
+  grid-row: row 3
+
+.skills
+  grid-column: col 5
+  grid-row: row 3
+  margin-left: 2.5rem
+
+.gutter-right
+  grid-column: col 6
+  grid-row: row 3
+
+
+// layout
+
+.img
+  background: url('/assets/images/colleen_beach.jpg') center right
+  background-size: cover
+  min-height: 100vh
+
+.about
+  background: $white
+  border-radius: 15rem 0 0 15rem
+  padding: 1rem 1rem 2rem 4rem
+  margin-bottom: 2.5rem
+
+.cv
+  dt
+    margin-top: 2rem
+  dd
+    margin-left: 0
+
+.skills
+  ul
+    list-style: none
+
+// helpers
+
+.blue
+  color: $blue
+
+.no-margin-top
+  margin-top: 0
+.no-margin-bottom
+  margin-bottom: 0
+
+.center
+  text-align: center

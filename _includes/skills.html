@@ -1,0 +1,46 @@
+<div class="skills">
+  <h2 class="blue">Skills</h2>
+  <dl>
+    {% assign design_skills = site.data.career.design_skills %}
+
+    {% for skill in design_skills %}
+
+    <dt>
+      {{ skill.name }}
+      {% if skill.learning%}<sup>*</sup>
+      {% elsif skill.lightly_familiar%}<sup>†</sup>
+      {% endif %}
+    </dt>
+    {% endfor %}
+  </dl>
+  <dl>
+    {% assign code_skills = site.data.career.code_skills %}
+
+    {% for skill in code_skills %}
+
+    <dt>
+      {{ skill.name }}
+      {% if skill.learning%}<sup>*</sup>
+      {% elsif skill.lightly_familiar%}<sup>†</sup>
+      {% endif %}
+    </dt>
+    {% endfor %}
+  </dl>
+  <dl>
+    {% assign tools = site.data.career.tools %}
+
+    {% for tool in tools %}
+
+    <dt>
+      {{ tool.name }}
+      {% if tool.learning%}<sup>*</sup>
+      {% elsif tool.lightly_familiar%}<sup>†</sup>
+      {% endif %}
+    </dt>
+    {% endfor %}
+  </dl>
+  <dl>
+    <dt><small><sup>*</sup> Learning</small></dt>
+    <dt><small><sup>†</sup> Lightly Familiar</small></dt>
+  </dl>
+</div>
