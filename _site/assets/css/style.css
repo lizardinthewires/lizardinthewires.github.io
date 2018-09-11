@@ -6,15 +6,19 @@ h1, h2, h3, h4, h5, h6 { font-family: "Roboto", Georgia, serif; font-weight: 900
 
 h1 { font-size: 3.5rem; }
 
-.about { grid-column: col 3/span 2; grid-row: row 2; }
+.about { grid-column: col 4/span 3; grid-row: row 2; }
 
-.img { grid-column: col/span 4; grid-row: row/span 2; }
+.img { grid-column: col/span 6; grid-row: row/span 2; }
 
-.cv, .skills { margin-top: 5rem; margin-left: 10rem; }
+.gutter-left, .gutter-right { width: 10rem; }
 
-.cv { grid-column: col/span 3; grid-row: row 3; }
+.gutter-left { grid-column: col; grid-row: row 3; }
 
-.skills { grid-column: col 4; grid-row: row 3; margin-right: 5rem; }
+.cv { grid-column: col 2/span 3; grid-row: row 3; }
+
+.skills { grid-column: col 5; grid-row: row 3; margin-left: 2.5rem; }
+
+.gutter-right { grid-column: col 6; grid-row: row 3; }
 
 .img { background: url("/assets/images/colleen_beach.jpg") center right; background-size: cover; min-height: 100vh; }
 
@@ -23,7 +27,6 @@ h1 { font-size: 3.5rem; }
 .cv dt { margin-top: 2rem; }
 .cv dd { margin-left: 0; }
 
-.skills { min-width: 15rem; }
 .skills ul { list-style: none; }
 
 .blue { color: #00AABE; }

@@ -23,82 +23,69 @@ education:
     degree: B.A. in Experimental Cinema
     years: 2005-2009
 
-skills:
+design_skills:
   - name: Strategy
-    type: design
     learning: false
     lightly_familiar: false
 
   - name: User flows
-    type: design
     learning: false
     lightly_familiar: false
 
   - name: Concept sketches
-    type: design
     learning: false
     lightly_familiar: false
 
   - name: Wireframes
-    type: design
     learning: false
     lightly_familiar: false
 
   - name: Prototying
-    type: design
     learning: false
     lightly_familiar: false
 
   - name: Data visualization
-    type: design
     learning: true
     lightly_familiar: false
 
   - name: UX copywriting
-    type: design
     learning: true
     lightly_familiar: false
 
+code_skills:
   - name: HTML
-    type: code
     learning: false
     lightly_familiar: false
 
   - name: CSS
-    type: code
     learning: false
     lightly_familiar: false
 
   - name: Sass
-    type: code
     learning: false
     lightly_familiar: false
 
   - name: Less
-    type: design
     learning: false
     lightly_familiar: true
 
   - name: Ruby on Rails
-    type: code
     learning: false
     lightly_familiar: false
 
   - name: Javascript
-    type: code
     learning: true
     lightly_familiar: false
 
   - name: Vue.js
-    type: code
     learning: true
     lightly_familiar: false
 
   - name: SQL
-    type: code
     learning: false
     lightly_familiar: true
 
+tools:
   - name: Sketch
     type: tool
     learning: false
