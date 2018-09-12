@@ -33,22 +33,29 @@ h2
 // grid
 
 .about
-  grid-column: col 4 / span 3
+  grid-column: col 3 / span 1
   grid-row: row
 
 .img
-  grid-column: col / span 6
+  grid-column: col / span 3
   grid-row: row
 
 
 .skills
-  grid-column: col / span 6
+  grid-column: col / span 3
   grid-row: row 2
 
-.cv
-  grid-column: col 2 / span 3
+.portfolio
+  grid-column: col / span 3
   grid-row: row 3
 
+.cv
+  grid-column: col / span 3
+  grid-row: row 4
+
+.footer
+  grid-column: col / span 3
+  grid-row: row 5
 
 
 // layout
@@ -66,33 +73,66 @@ h2
   align-items: center
   justify-content: center
   flex-direction: column
-  transform: skew(-15deg, 0) translateX(6rem)
+  transform: skew(-15deg, 0) translateX(5.5rem)
   overflow: hidden
+  padding: 0 6rem
   .text
     transform: skew(15deg, 0)
-    margin-right: 5rem
-
-.cv
-  dt
-    margin-top: 2rem
-  dd
-    margin-left: 0
+  .contact
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    margin: auto
+    width: 10rem
+    svg
+      height: 2.5rem
+    a
+      color: $blue
+      transition: all 0.2s ease-in-out
+      &:hover
+        color: $black
 
 .skills
   background: $blue
   box-shadow: -0.25rem 0 0.5rem rgba($black, 0.25)
   color: $white
-  display: -ms-flex
-  display: flex
-  justify-content: space-around
-  padding: 3rem 5rem
-  dl
-    column-count: 2
-  .legend
-    align-self: flex-end
+  padding: 3rem 6rem 1rem
   ul
     list-style: none
+.skills-list
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  dl
+    column-count: 2
 
+.portfolio
+  background: $black
+  color: $white
+  padding: 3rem 6rem
+.projects
+  display: -ms-flex
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+.project
+  margin: 0
+  padding: 2rem
+  width: 50%
+  img
+    max-width: 100%
+  a
+    color: $white
+    text-decoration: none
+
+
+.cv
+  background: $white
+  padding: 3rem 6rem
+  dt
+    margin-top: 2rem
+  dd
+    margin-left: 0
 
 // helpers
 
@@ -109,3 +149,5 @@ h2
 
 .center
   text-align: center
+.right
+  text-align: right

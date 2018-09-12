@@ -1,11 +1,14 @@
 <div class="portfolio">
+  <h2>Past Projects</h2>
   {% assign portfolio = site.data.portfolio.projects %}
   <div class="projects">
   {% for project in portfolio %}
     <figure class="project">
-      <img src="/assets/images/{{project.folder}}.jpg" alt="{{project.name}}">
+      <a href="/{{project.folder}}.html" target="_blank">
+        <img src="/assets/images/{{project.folder}}.jpg" alt="{{project.name}}">
+      </a>
       <figcaption>
-        <a href="/{{project.folder}}.html">
+        <a href="/{{project.folder}}.html" target="_blank">
           <h3 class="blue no-margin-bottom">{{project.name}}</h3>
           <p class="no-margin-top">{{project.description}}</p>
         </a>

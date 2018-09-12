@@ -8,26 +8,44 @@ h1 { font-size: 4rem; letter-spacing: -1.5px; }
 
 h2 { font-size: 2rem; letter-spacing: -0.5px; }
 
-.about { grid-column: col 4/span 3; grid-row: row; }
+.about { grid-column: col 3/span 1; grid-row: row; }
 
-.img { grid-column: col/span 6; grid-row: row; }
+.img { grid-column: col/span 3; grid-row: row; }
 
-.skills { grid-column: col/span 6; grid-row: row 2; }
+.skills { grid-column: col/span 3; grid-row: row 2; }
 
-.cv { grid-column: col 2/span 3; grid-row: row 3; }
+.portfolio { grid-column: col/span 3; grid-row: row 3; }
+
+.cv { grid-column: col/span 3; grid-row: row 4; }
+
+.footer { grid-column: col/span 3; grid-row: row 5; }
 
 .img { background: url("/assets/images/colleen_beach.jpg") center left; background-size: cover; min-height: 105vh; }
 
-.about { background: #F2F2F2; box-shadow: 0 0 0.5rem rgba(0, 10, 30, 0.25); display: -ms-flex; display: flex; align-items: center; justify-content: center; flex-direction: column; transform: skew(-15deg, 0) translateX(6rem); overflow: hidden; }
-.about .text { transform: skew(15deg, 0); margin-right: 5rem; }
+.about { background: #F2F2F2; box-shadow: 0 0 0.5rem rgba(0, 10, 30, 0.25); display: -ms-flex; display: flex; align-items: center; justify-content: center; flex-direction: column; transform: skew(-15deg, 0) translateX(5.5rem); overflow: hidden; padding: 0 6rem; }
+.about .text { transform: skew(15deg, 0); }
+.about .contact { display: -ms-flex; display: flex; justify-content: space-between; margin: auto; width: 10rem; }
+.about .contact svg { height: 2.5rem; }
+.about .contact a { color: #00AABE; transition: all 0.2s ease-in-out; }
+.about .contact a:hover { color: #000A1E; }
 
+.skills { background: #00AABE; box-shadow: -0.25rem 0 0.5rem rgba(0, 10, 30, 0.25); color: #F2F2F2; padding: 3rem 6rem 1rem; }
+.skills ul { list-style: none; }
+
+.skills-list { display: -ms-flex; display: flex; justify-content: space-between; }
+.skills-list dl { column-count: 2; }
+
+.portfolio { background: #000A1E; color: #F2F2F2; padding: 3rem 6rem; }
+
+.projects { display: -ms-flex; display: flex; flex-wrap: wrap; justify-content: space-around; }
+
+.project { margin: 0; padding: 2rem; width: 50%; }
+.project img { max-width: 100%; }
+.project a { color: #F2F2F2; text-decoration: none; }
+
+.cv { background: #F2F2F2; padding: 3rem 6rem; }
 .cv dt { margin-top: 2rem; }
 .cv dd { margin-left: 0; }
-
-.skills { background: #00AABE; box-shadow: -0.25rem 0 0.5rem rgba(0, 10, 30, 0.25); color: #F2F2F2; display: -ms-flex; display: flex; justify-content: space-around; padding: 3rem 5rem; }
-.skills dl { column-count: 2; }
-.skills .legend { align-self: flex-end; }
-.skills ul { list-style: none; }
 
 .blue { color: #00AABE; }
 
@@ -38,3 +56,5 @@ h2 { font-size: 2rem; letter-spacing: -0.5px; }
 .line-height-normal { line-height: normal; }
 
 .center { text-align: center; }
+
+.right { text-align: right; }

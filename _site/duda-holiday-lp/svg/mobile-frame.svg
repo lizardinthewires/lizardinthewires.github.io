@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" width="219.89" height="429.1" viewBox="0 0 219.89 429.1" enable-background="new 0 0 219.886 429.104" preserveAspectRatio="none">
+  <path fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" d="M3.83 95.69c0 1.38 1.12 2.5 2.5 2.5l0 0c1.38 0 2.5-1.12 2.5-2.5v-20.5c0-1.38-1.12-2.5-2.5-2.5l0 0c-1.38 0-2.5 1.12-2.5 2.5V95.69z"/>
+  <path fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" d="M5 56.78c0 0.78 0.86 1.41 1.92 1.41l0 0c1.06 0 1.92-0.63 1.92-1.4V45.26c0-0.78-0.86-1.4-1.92-1.4l0 0C5.86 43.85 5 44.48 5 45.26V56.78z"/>
+  <path fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" d="M3.83 124.19c0 1.38 1.12 2.5 2.5 2.5l0 0c1.38 0 2.5-1.12 2.5-2.5v-20.5c0-1.38-1.12-2.5-2.5-2.5l0 0c-1.38 0-2.5 1.12-2.5 2.5V124.19z"/>
+  <path fill="#FFFFFF" stroke="#B79F83" stroke-width="3" stroke-miterlimit="10" d="M216.3 399.48c0 14.71-11.93 26.64-26.64 26.64H34.73c-14.71 0-26.64-11.93-26.64-26.64V29.63c0-14.71 11.93-26.64 26.64-26.64h154.93c14.71 0 26.64 11.93 26.64 26.64V399.48z"/>
+  <path fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" d="M127.5 26.73c0 1.03-0.83 1.87-1.87 1.87H98.77c-1.03 0-1.87-0.83-1.87-1.87l0 0c0-1.03 0.84-1.87 1.87-1.87h26.87C126.66 24.87 127.5 25.7 127.5 26.73L127.5 26.73z"/>
+  <circle fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" cx="112.2" cy="14.45" r="2.8"/>
+  <circle fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" cx="84.84" cy="26.15" r="4.97"/>
+  <circle fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" cx="112.2" cy="402.51" r="13.43"/>
+  <circle fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" cx="112.2" cy="402.51" r="11.93"/>
+  <rect x="8.17" y="29.19" fill="#B79F83" width="4" height="4.5"/>
+  <rect x="211.83" y="29.19" fill="#B79F83" width="4" height="4.5"/>
+  <rect x="8.17" y="399.19" fill="#B79F83" width="4" height="4.5"/>
+  <rect x="211.83" y="399.19" fill="#B79F83" width="4" height="4.5"/>
+  <circle fill="#FFFFFF" stroke="#B79F83" stroke-miterlimit="10" cx="84.84" cy="26.15" r="2.8"/>
+</svg>
