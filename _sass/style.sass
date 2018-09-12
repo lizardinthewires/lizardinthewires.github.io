@@ -30,7 +30,7 @@ h2
   font-size: 2rem
   letter-spacing: -0.5px
 
-// grid
+// desktop grid
 
 .about
   grid-column: col 3 / span 1
@@ -39,7 +39,6 @@ h2
 .img
   grid-column: col / span 3
   grid-row: row
-
 
 .skills
   grid-column: col / span 3
@@ -58,12 +57,12 @@ h2
   grid-row: row 5
 
 
-// layout
+// desktop layout
 
 .img
   background: url('/assets/images/colleen_beach.jpg') center left
   background-size: cover
-  min-height: 105vh
+  height: 105vh
 
 .about
   background: $white
@@ -73,9 +72,9 @@ h2
   align-items: center
   justify-content: center
   flex-direction: column
-  transform: skew(-15deg, 0) translateX(5.5rem)
+  transform: skew(-15deg, 0) translateX(6rem)
   overflow: hidden
-  padding: 0 6rem
+  width: 50vw
   .text
     transform: skew(15deg, 0)
   .contact
@@ -96,7 +95,7 @@ h2
   background: $blue
   box-shadow: -0.25rem 0 0.5rem rgba($black, 0.25)
   color: $white
-  padding: 3rem 6rem 1rem
+  padding: 3rem 10% 1rem
   ul
     list-style: none
 .skills-list
@@ -109,7 +108,7 @@ h2
 .portfolio
   background: $black
   color: $white
-  padding: 3rem 6rem
+  padding: 3rem 10%
 .projects
   display: -ms-flex
   display: flex
@@ -121,18 +120,68 @@ h2
   width: 50%
   img
     max-width: 100%
+    transition: all 0.2s ease-in-out
+    &:hover
+      transform: scale(1.05)
   a
     color: $white
     text-decoration: none
-
-
 .cv
   background: $white
-  padding: 3rem 6rem
+  padding: 3rem 10%
   dt
     margin-top: 2rem
   dd
     margin-left: 0
+
+
+// mobile grid
+
+@media screen and (max-width: 640px)
+  .about
+    grid-column: col
+    grid-row: row
+
+  .img
+    grid-column: col
+    grid-row: row 2
+
+  .skills
+    grid-column: col
+    grid-row: row 3
+
+  .portfolio
+    grid-column: col
+    grid-row: row 4
+
+  .cv
+    grid-column: col
+    grid-row: row 5
+
+  .footer
+    grid-column: col
+    grid-row: row 6
+
+
+// mobile layout adjustments
+
+@media screen and (max-width: 640px)
+  .img
+    background-position-y: bottom
+    height: 35vh
+  .about
+    width: 100%
+    transform: none
+    background: rgba($white, 0.75)
+    padding-bottom: 3rem
+    .text
+      transform: none
+  .skills-list
+    flex-wrap: wrap
+    justify-content: center
+  .project
+    width: 100%
+    padding: 2rem 0
 
 // helpers
 
