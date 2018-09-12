@@ -1,6 +1,6 @@
 // variables
 
-$white: #DDE7DE
+$white: #F2F2F2
 $black: #000A1E
 $blue: #00AABE
 
@@ -16,58 +16,61 @@ body
   display: grid
   font: 18px/1.5 'Roboto', 'Helvetica Neue', Helvetica, sans-serif
   margin: 0
+  overflow-x: hidden
+  -moz-osx-font-smoothin: grayscale
+  -webkit-font-smoothing: antialiased
+  font-smooth: auto
 
-h1, h2, h3, h4, h5, h6
-  font-family: 'Roboto', Georgia, serif
-  font-weight: 900
-
+h1, h2
+  font-weight: 300
 h1
-  font-size: 3.5rem
-
+  font-size: 4rem
+  letter-spacing: -1.5px
+h2
+  font-size: 2rem
+  letter-spacing: -0.5px
 
 // grid
 
 .about
   grid-column: col 4 / span 3
-  grid-row: row 2
+  grid-row: row
 
 .img
   grid-column: col / span 6
-  grid-row: row / span 2
+  grid-row: row
 
-.gutter-left, .gutter-right
-  width: 10rem
 
-.gutter-left
-  grid-column: col
-  grid-row: row 3
+.skills
+  grid-column: col / span 6
+  grid-row: row 2
 
 .cv
   grid-column: col 2 / span 3
   grid-row: row 3
 
-.skills
-  grid-column: col 5
-  grid-row: row 3
-  margin-left: 2.5rem
-
-.gutter-right
-  grid-column: col 6
-  grid-row: row 3
 
 
 // layout
 
 .img
-  background: url('/assets/images/colleen_beach.jpg') center right
+  background: url('/assets/images/colleen_beach.jpg') center left
   background-size: cover
-  min-height: 100vh
+  min-height: 105vh
 
 .about
   background: $white
-  border-radius: 15rem 0 0 15rem
-  padding: 1rem 1rem 2rem 4rem
-  margin-bottom: 2.5rem
+  box-shadow: 0 0 0.5rem rgba($black, 0.25)
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  transform: skew(-15deg, 0) translateX(6rem)
+  overflow: hidden
+  .text
+    transform: skew(15deg, 0)
+    margin-right: 5rem
 
 .cv
   dt
@@ -76,8 +79,20 @@ h1
     margin-left: 0
 
 .skills
+  background: $blue
+  box-shadow: -0.25rem 0 0.5rem rgba($black, 0.25)
+  color: $white
+  display: -ms-flex
+  display: flex
+  justify-content: space-around
+  padding: 3rem 5rem
+  dl
+    column-count: 2
+  .legend
+    align-self: flex-end
   ul
     list-style: none
+
 
 // helpers
 
@@ -88,6 +103,9 @@ h1
   margin-top: 0
 .no-margin-bottom
   margin-bottom: 0
+
+.line-height-normal
+  line-height: normal
 
 .center
   text-align: center
