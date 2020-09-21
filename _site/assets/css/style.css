@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
 
-body { background: #FFA259 url("/assets/images/colleen_beach.png") bottom right no-repeat fixed; background-size: contain; color: rgba(51, 22, 0, 0.95); display: -ms-grid; display: grid; grid-template-columns: 75% 25%; grid-template-rows: 25% 75%; grid-row-gap: 5rem; font: 18px/1.5 "Roboto", "Helvetica Neue", Helvetica, sans-serif; margin: 2rem 10rem 0rem; -moz-osx-font-smoothin: grayscale; -webkit-font-smoothing: antialiased; font-smooth: auto; }
+body { background: #FFA259 url("/assets/images/colleen_beach.png") bottom right no-repeat fixed; background-size: contain; color: #331600; display: -ms-grid; display: grid; grid-template-columns: 75% 25%; grid-template-rows: 25% 75%; grid-row-gap: 5rem; font: 18px/1.5 "Roboto", "Helvetica Neue", Helvetica, sans-serif; margin: 2rem 10rem 0rem; -moz-osx-font-smoothin: grayscale; -webkit-font-smoothing: antialiased; font-smooth: auto; }
 
 h1, h2 { font-family: Roboto Black; line-height: 1.2; }
 
