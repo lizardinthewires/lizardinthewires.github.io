@@ -1,8 +1,10 @@
 // variables
 
-$white: #F2F2F2
-$black: #000A1E
-$blue: #00AABE
+$orange: #FFA259
+$teal: #A0D1CA
+$white: rgba(255,255,255, 0.85)
+$black: rgba(51,22,0,0.95)
+$black-light: rgba(51,22,0,0.30)
 
 // base
 
@@ -10,193 +12,66 @@ $blue: #00AABE
   box-sizing: border-box
 
 body
-  background: $white
+  background: $orange url('/assets/images/colleen_beach.png') right no-repeat fixed
+  background-size: contain
   color: $black
   display: -ms-grid
   display: grid
+  grid-template-columns: 75% 25%
+  grid-template-rows: 25% 75%
+  grid-row-gap: 5rem
   font: 18px/1.5 'Roboto', 'Helvetica Neue', Helvetica, sans-serif
-  margin: 0
-  overflow-x: hidden
+  margin: 2rem 10rem 0rem
   -moz-osx-font-smoothin: grayscale
   -webkit-font-smoothing: antialiased
   font-smooth: auto
 
 h1, h2
-  font-weight: 300
+  font-family: Roboto Black
+  line-height: 1.2
 h1
-  font-size: 4rem
+  font-size: 3.75rem
   letter-spacing: -1.5px
 h2
-  font-size: 2rem
+  font-size: 2.25rem
   letter-spacing: -0.5px
-
-// desktop grid
-
-.about
-  grid-column: col 3 / span 1
-  grid-row: row
-
-.img
-  grid-column: col / span 3
-  grid-row: row
-
-.skills
-  grid-column: col / span 3
-  grid-row: row 2
-
-.portfolio
-  grid-column: col / span 3
-  grid-row: row 3
-
-.cv
-  grid-column: col / span 3
-  grid-row: row 4
-
-.footer
-  grid-column: col / span 3
-  grid-row: row 5
-
 
 // desktop layout
 
-.img
-  background: url('/assets/images/colleen_beach.jpg') center left
-  background-size: cover
-  height: 105vh
-
-.about
-  background: $white
-  box-shadow: 0 0 0.5rem rgba($black, 0.25)
-  display: -ms-flex
+nav, footer
+  grid-column: 1 / span 2
   display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: column
-  transform: skew(-15deg, 0) translateX(6rem)
-  overflow: hidden
-  width: 50vw
-  .text
-    transform: skew(15deg, 0)
-  .contact
-    display: -ms-flex
-    display: flex
-    justify-content: space-between
-    margin: auto
-    width: 10rem
-    svg
-      height: 2.5rem
-    a
-      color: $blue
-      transition: all 0.2s ease-in-out
-      &:hover
-        color: $black
-
-.skills
-  background: $blue
-  box-shadow: -0.25rem 0 0.5rem rgba($black, 0.25)
-  color: $white
-  padding: 3rem 10% 1rem
-  ul
-    list-style: none
-.skills-list
-  display: -ms-flex
-  display: flex
-  justify-content: space-between
-  dl
-    column-count: 2
-
-.portfolio
-  background: $black
-  color: $white
-  padding: 3rem 10%
-.projects
-  display: -ms-flex
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-around
-.project
-  margin: 0
-  padding: 2rem
-  width: 50%
-  img
-    max-width: 100%
-    transition: all 0.2s ease-in-out
-    &:hover
-      transform: scale(1.05)
+  column-gap: 2rem
   a
+    text-size: 1.2rem
     color: $white
+    font-weight: 600
     text-decoration: none
-.cv
-  background: $white
-  padding: 3rem 10%
-  dt
-    margin-top: 2rem
-  dd
-    margin-left: 0
+    &:hover
+      color: #ffffff
+nav
+  justify-content: end
+  column-gap: 3rem
 
+footer img
+  height: 2.25rem
 
-// mobile grid
+.text
+  max-width: 75%
 
-@media screen and (max-width: 640px)
-  .about
-    grid-column: col
-    grid-row: row
+  a
+    background: $black-light
+    color: $teal
+    font-weight: 600
+    text-decoration: none
+    padding-right: 0.15rem
+    padding-left: 0.15rem
 
-  .img
-    grid-column: col
-    grid-row: row 2
-
-  .skills
-    grid-column: col
-    grid-row: row 3
-
-  .portfolio
-    grid-column: col
-    grid-row: row 4
-
-  .cv
-    grid-column: col
-    grid-row: row 5
-
-  .footer
-    grid-column: col
-    grid-row: row 6
-
-
-// mobile layout adjustments
-
-@media screen and (max-width: 640px)
-  .img
-    background-position-y: bottom
-    height: 35vh
-  .about
-    width: 100%
-    transform: none
-    background: rgba($white, 0.75)
-    padding-bottom: 3rem
-    .text
-      transform: none
-  .skills-list
-    flex-wrap: wrap
-    justify-content: center
-  .project
-    width: 100%
-    padding: 2rem 0
 
 // helpers
-
-.blue
-  color: $blue
-
-.no-margin-top
-  margin-top: 0
-.no-margin-bottom
-  margin-bottom: 0
-
-.line-height-normal
-  line-height: normal
-
+.teal
+  color: $teal
+.white
+  color: $white
 .center
   text-align: center
-.right
-  text-align: right
