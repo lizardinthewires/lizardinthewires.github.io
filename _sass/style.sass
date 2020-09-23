@@ -17,8 +17,7 @@ body
   display: -ms-grid
   display: grid
   grid-template-columns: 75% 25%
-  grid-template-rows: 25% 75%
-  grid-row-gap: 5rem
+  grid-row-gap: 1rem
   font: 18px/1.5 'Roboto', 'Helvetica Neue', Helvetica, sans-serif
   margin: 2rem 10rem 0rem
   -moz-osx-font-smoothin: grayscale
@@ -54,7 +53,7 @@ nav, footer
   a
     text-size: 1.2rem
 nav
-  justify-content: end
+  justify-content: flex-end
   column-gap: 3rem
 
 footer img
@@ -62,6 +61,7 @@ footer img
 
 .text
   max-width: 75%
+  justify-content: center
 
 // helpers
 .teal
@@ -76,22 +76,17 @@ footer img
   body
     background: $orange url('/assets/images/colleen_beach_tablet.png') top right no-repeat fixed
     background-size: contain
-    grid-template-columns: 85% 15%
-    grid-row-gap: 2rem
     margin: 2rem 5rem 0rem
     .text
       max-width: 100%
     p
       max-width: 65%
-  nav
-    justify-content: start
 
 // mobile
 @media only screen and (max-width: 700px)
   body
     background: $orange
     grid-template-columns: 100% 0%
-    grid-row-gap: 1rem
     margin: 2rem 2rem 0rem
     h1
       font-size: 2.5rem
