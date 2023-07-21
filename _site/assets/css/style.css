@@ -27,6 +27,8 @@ footer img { height: 2.25rem; }
 
 .center { text-align: center; }
 
+.inline { display: inline; }
+
 @media only screen and (max-width: 1215px) { body { background: #ffa384 url("/assets/images/colleen_beach_tablet.png") top right no-repeat fixed; background-size: contain; margin: 2rem 5rem 0rem; }
   body .text { max-width: 100%; }
   body p { max-width: 65%; } }
