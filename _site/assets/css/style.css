@@ -1,15 +1,16 @@
 * { box-sizing: border-box; }
 
-body { background: #FFA259 url("/assets/images/colleen_beach.png") bottom right no-repeat fixed; background-size: contain; color: rgba(51, 22, 0, 0.95); display: -ms-grid; display: grid; grid-template-columns: 75% 25%; grid-row-gap: 1rem; font: 18px/1.5 "Roboto", "Helvetica Neue", Helvetica, sans-serif; margin: 2rem 10rem 0rem; -moz-osx-font-smoothin: grayscale; -webkit-font-smoothing: antialiased; font-smooth: auto; }
+body { background: #ffa384 url("/assets/images/colleen_beach.png") bottom right no-repeat fixed; background-size: contain; color: rgba(51, 22, 0, 0.95); display: -ms-grid; display: grid; grid-template-columns: 75% 25%; grid-row-gap: 1rem; font: 18px/1.5 "Roboto", "Helvetica Neue", Helvetica, sans-serif; margin: 2rem 10rem 0rem; -moz-osx-font-smoothin: grayscale; -webkit-font-smoothing: antialiased; font-smooth: auto; }
 
 h1, h2 { font-weight: 900; line-height: 1.2; }
 
 h1 { font-size: 3.75rem; letter-spacing: -1.5px; }
+h1 small { font-size: 35%; letter-spacing: normal; }
 
 h2 { font-size: 2.25rem; letter-spacing: -0.5px; }
 
-a { color: rgba(255, 255, 255, 0.85); font-weight: 500; text-decoration: none; padding-right: 0.15rem; padding-left: 0.15rem; transition: color 0.25s ease; }
-a:hover { color: #A0D1CA; }
+a { color: #e7f2f8; font-weight: 500; text-decoration: none; padding-right: 0.15rem; padding-left: 0.15rem; transition: color 0.25s ease; }
+a:hover { color: #74bdcb; }
 
 nav, footer { grid-column: 1/span 2; display: flex; column-gap: 2rem; }
 nav a, footer a { text-size: 1.2rem; }
@@ -20,16 +21,16 @@ footer img { height: 2.25rem; }
 
 .text { max-width: 75%; justify-content: center; }
 
-.teal { color: #A0D1CA; }
+.teal { color: #74bdcb; }
 
-.white { color: rgba(255, 255, 255, 0.85); }
+.white { color: #e7f2f8; }
 
 .center { text-align: center; }
 
-@media only screen and (max-width: 1215px) { body { background: #FFA259 url("/assets/images/colleen_beach_tablet.png") top right no-repeat fixed; background-size: contain; margin: 2rem 5rem 0rem; }
+@media only screen and (max-width: 1215px) { body { background: #ffa384 url("/assets/images/colleen_beach_tablet.png") top right no-repeat fixed; background-size: contain; margin: 2rem 5rem 0rem; }
   body .text { max-width: 100%; }
   body p { max-width: 65%; } }
-@media only screen and (max-width: 700px) { body { background: #FFA259; grid-template-columns: 100% 0%; margin: 2rem 2rem 0rem; }
+@media only screen and (max-width: 700px) { body { background: #ffa384; grid-template-columns: 100% 0%; margin: 2rem 2rem 0rem; }
   body h1 { font-size: 2.5rem; }
   body p { max-width: 100%; }
   body nav, body footer { justify-content: center; } }
