@@ -1,19 +1,17 @@
 // variables
 
-$orange: #ffa384
-$teal: #74bdcb
-$white: #e7f2f8
-$black: rgba(51,22,0,0.95)
-
+$background: #123D33
+$accent: #D6E64F 
+$text: #F2EFE2
 // base
 
 *
   box-sizing: border-box
 
 body
-  background: $orange url('/assets/images/colleen_beach.png') bottom right no-repeat fixed
+  background: $background url('/assets/images/colleen_beach.png') bottom right no-repeat fixed
   background-size: contain
-  color: $black
+  color: $text
   display: -ms-grid
   display: grid
   grid-template-columns: 75% 25%
@@ -24,28 +22,25 @@ body
   -webkit-font-smoothing: antialiased
   font-smooth: auto
 
-h1, h2
+h1,
   font-weight: 900
   line-height: 1.2
+  display: inline
 h1
   font-size: 3.75rem
   letter-spacing: -1.5px
   small
     font-size: 35%
     letter-spacing: normal
-h2
-  font-size: 2.25rem
-  letter-spacing: -0.5px
+h3
+  display: inline
 
 a
-    color: $white
+    color: $accent
     font-weight: 500
     text-decoration: none
-    padding-right: 0.15rem
-    padding-left: 0.15rem
-    transition: color 0.25s ease
     &:hover
-      color: $teal
+      text-decoration: underline
 
 // desktop layout
 
@@ -67,10 +62,8 @@ footer img
   justify-content: center
 
 // helpers
-.teal
-  color: $teal
-.white
-  color: $white
+.accent
+  color: $accent
 .center
   text-align: center
 .inline
@@ -79,7 +72,7 @@ footer img
 // tablet
 @media only screen and (max-width: 1215px)
   body
-    background: $orange url('/assets/images/colleen_beach_tablet.png') top right no-repeat fixed
+    background: $background url('/assets/images/colleen_beach_tablet.png') top right no-repeat fixed
     background-size: contain
     margin: 2rem 5rem 0rem
     .text
@@ -90,7 +83,7 @@ footer img
 // mobile
 @media only screen and (max-width: 700px)
   body
-    background: $orange
+    background: $background
     grid-template-columns: 100% 0%
     margin: 2rem 2rem 0rem
     h1

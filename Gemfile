@@ -28,3 +28,6 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 
 gem "webrick", "~> 1.8"
+
+# jekyll 3.9.3's LogAdapter breaks with logger >= 1.6 (Ruby 3.3 default)
+gem "logger", "~> 1.5.3"
